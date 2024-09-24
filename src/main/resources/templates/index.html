@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Bath Car Park Monitor</title>
+</head>
+<body>
+    <div>
+        <h1>Available Car Parks...</h1>
+        <table class="container">
+            <tr>
+                <th>Name</th>
+                <th>Occupancy</th>
+                <th>Capacity</th>
+                <th>Status</th>
+            </tr>
+            <tr th:each="park : ${carParksData}">
+                <td th:text="${park.name}">...</td>
+                <td th:text="${park.occupancy}">...</td>
+                <td th:text="${park.capacity}">...</td>
+                <td th:text="${park.status}">...</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
